@@ -182,13 +182,13 @@ a {
 .hero::before {
   content: "";
   position: absolute;
-  inset: -25%;
+  inset: -30%;
   background:
-    radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.5), transparent 60%),
-    radial-gradient(circle at 80% 30%, rgba(56, 189, 248, 0.45), transparent 60%);
+    radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.75), transparent 55%),
+    radial-gradient(circle at 80% 30%, rgba(56, 189, 248, 0.7), transparent 55%);
   mix-blend-mode: screen;
-  opacity: 0.5;
-  animation: spinHero 26s linear infinite;
+  opacity: 0.9;
+  animation: spinHero 14s linear infinite;
   transform-origin: center;
 }
 
@@ -651,10 +651,10 @@ h2 {
 
 @keyframes spinHero {
   from {
-    transform: rotate(0deg);
+    transform: rotate(0deg) scale(1.05);
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(360deg) scale(1.05);
   }
 }
 
