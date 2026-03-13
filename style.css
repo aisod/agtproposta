@@ -173,8 +173,23 @@ a {
     radial-gradient(circle at 80% 0%, #9bd5ff 0, #9bd5ff 22%, transparent 55%),
     linear-gradient(to bottom, #e3f3ff 0, #c5e4ff 30%, #8ac3ff 60%, #5b9dff 80%, #f5f7fb 100%);
   color: #0d8bff;
+  position: relative;
+  overflow: hidden;
   padding: 5.5rem 0 4.5rem;
   text-align: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: -25%;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.5), transparent 60%),
+    radial-gradient(circle at 80% 30%, rgba(56, 189, 248, 0.45), transparent 60%);
+  mix-blend-mode: screen;
+  opacity: 0.5;
+  animation: spinHero 26s linear infinite;
+  transform-origin: center;
 }
 
 .hero-inner {
@@ -631,6 +646,15 @@ h2 {
   }
   50% {
     transform: translateY(3px);
+  }
+}
+
+@keyframes spinHero {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 
